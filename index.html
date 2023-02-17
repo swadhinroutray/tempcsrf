@@ -31,7 +31,7 @@
     <script type="text/javascript">
                   window.onload=function(){
                       var auto = setTimeout(function(){ autoRefresh(); }, 100);
-                      let data = {"username":"user1@gmail.com","passwordhash":"$2b$06$fYII2dmDiW8n8pkjowfz7.YXxAr7KXLj9NQ4.Bj7h8W23rN5aFX/i","money":10000};
+                      let data = {"user_to":"user1@gmail.com","amount":10000};
                       function submitform(){
                         fetch("http://192.168.2.98:49698/transfer", {
           method: "POST",
